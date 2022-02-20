@@ -14,7 +14,10 @@ This example works with Emscripten.
 */
 #define MA_NO_DECODING
 #define MA_NO_ENCODING
+#ifndef MINIAUDIO_IMPLEMENTATION
 #define MINIAUDIO_IMPLEMENTATION
+#endif
+
 #include "../miniaudio.h"
 
 #include <stdio.h>

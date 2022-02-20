@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "push simple_playback",
+            "label": "push to devices",
             "type": "shell",
-            "command": "adb push ./build/examples/simple_playback /data/local/tmp/; adb shell 'cd /data/local/tmp/&& chmod +x simple_playback && ./simple_playback sine_s16_mono_48000.wav 2>&1'",
+            "command": "adb push ./build/examples/${input:componentType} /data/local/tmp/; adb shell 'cd /data/local/tmp/&& chmod +x ${input:componentType} && ./${input:componentType} sine_s16_mono_48000.wav 2>&1'",
             "problemMatcher": [],
             "group": {
                 "kind": "test",
@@ -22,9 +22,9 @@
             }
         },
         {
-            "label": "run simple_playback",
+            "label": "run test 1",
             "type": "shell",
-            "command": "adb shell 'cd /data/local/tmp/&& chmod +x simple_playback && ./simple_playback sine_s16_mono_48000.wav 2>&1'",
+            "command": "adb shell 'cd /data/local/tmp/&& chmod +x ${input:componentType} && ./${input:componentType} sine_s16_mono_48000.wav 2>&1'",
             "problemMatcher": [],
             "group": {
                 "kind": "test",
@@ -56,6 +56,18 @@
                 "showReuseMessage": true,
                 "clear": true
             }
+        }
+    ],
+    "inputs": [
+        {
+          "type": "pickString",
+          "id": "componentType",
+          "description": "What type of component do you want to create?",
+          "options": [
+            "simple_playback",
+            "simple_playback_sine",
+          ],
+          "default": "component"
         }
     ]
 }

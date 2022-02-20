@@ -1,6 +1,0 @@
-D:/worktmp/miniaudio/build/CMakeFiles/miniaudio.dir
-D:/worktmp/miniaudio/build/CMakeFiles/edit_cache.dir
-D:/worktmp/miniaudio/build/CMakeFiles/rebuild_cache.dir
-D:/worktmp/miniaudio/build/examples/CMakeFiles/simple_playback.dir
-D:/worktmp/miniaudio/build/examples/CMakeFiles/edit_cache.dir
-D:/worktmp/miniaudio/build/examples/CMakeFiles/rebuild_cache.dir

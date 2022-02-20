@@ -17,5 +17,6 @@ ${PROJECT_SOURCE_DIR}/
 target_link_libraries(${PROJECT_NAME} dl m ${extra_libs})
 
 option(SUPPORT_PLAYBACK "simple playback" ON)
+option(SUPPORT_PLAYBACK_SINE "SUPPORT_PLAYBACK_SINE" on)
 
 add_subdirectory(examples)
