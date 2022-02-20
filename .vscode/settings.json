@@ -9,8 +9,13 @@
         "-DCMAKE_SYSTEM_VERSION=28",
         "-DANDROID_PLATFORM=android-28"
     ],
-    "C_Cpp.default.configurationProvider": "",
     "C_Cpp.default.cppStandard": "c++14",
     "C_Cpp.default.cStandard": "c11",
-    "C_Cpp.default.intelliSenseMode": "linux-clang-arm64"
+    "C_Cpp.default.intelliSenseMode": "linux-clang-arm64",
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "miniaudio.h": "c",
+        "log.h": "c",
+        "ma_log.h": "c"
+    }
 }

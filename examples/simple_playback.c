@@ -15,7 +15,6 @@ the simple_mixing example for how best to do this.
 #endif
 
 #include "../miniaudio.h"
-
 #include <stdio.h>
 
 void data_callback(ma_device* pDevice, void* pOutput, const void* pInput, ma_uint32 frameCount)
@@ -42,6 +41,7 @@ int main(int argc, char** argv)
         return -1;
     }
 
+    LOGD("ma decord file %s", argv[1]);
     result = ma_decoder_init_file(argv[1], NULL, &decoder);
     if (result != MA_SUCCESS) {
         printf("Could not load file: %s\n", argv[1]);
@@ -68,11 +68,16 @@ int main(int argc, char** argv)
         return -4;
     }
 
-    printf("Press Enter to quit...\n");
-    getchar();
-
     ma_device_uninit(&device);
     ma_decoder_uninit(&decoder);
+
+    LOGD("play finished.");
+#if 0
+    printf("Press Enter to quit...\n");
+    getchar();
+#else
+    printf("play finished.");
+#endif
 
     return 0;
 }

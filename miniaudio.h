@@ -52,8 +52,6 @@ SOFTWARE.
 #ifndef miniaudio_h
 #define miniaudio_h
 
-#include "log.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7428,3 +7426,4 @@ This is for preventing greying out of the implementation section.
 #endif
 
 #include "shared_base.h"
+#include "ma_log.h"
