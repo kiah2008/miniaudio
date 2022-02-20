@@ -10,7 +10,10 @@ device and can be used independently of it. This example only plays back a singl
 back multiple files by simple loading multiple decoders and mixing them (do not create multiple devices to do this). See
 the simple_mixing example for how best to do this.
 */
+#ifndef MINIAUDIO_IMPLEMENTATION
 #define MINIAUDIO_IMPLEMENTATION
+#endif
+
 #include "../miniaudio.h"
 
 #include <stdio.h>
@@ -65,7 +68,7 @@ int main(int argc, char** argv)
         return -4;
     }
 
-    printf("Press Enter to quit...");
+    printf("Press Enter to quit...\n");
     getchar();
 
     ma_device_uninit(&device);

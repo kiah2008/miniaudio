@@ -1,0 +1,61 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "push simple_playback",
+            "type": "shell",
+            "command": "adb push ./build/examples/simple_playback /data/local/tmp/; adb shell 'cd /data/local/tmp/&& chmod +x simple_playback && ./simple_playback sine_s16_mono_48000.wav 2>&1'",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "run simple_playback",
+            "type": "shell",
+            "command": "adb shell 'cd /data/local/tmp/&& chmod +x simple_playback && ./simple_playback sine_s16_mono_48000.wav 2>&1'",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "push res",
+            "type": "shell",
+            "command": "adb push ${workspaceFolder}/tests/_build/res/sine_s16_mono_48000.wav /data/local/tmp/",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        }
+    ]
+}

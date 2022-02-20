@@ -10,4 +10,7 @@ tests/_build/vc6/
 tests/_build/vc15/
 tools/_build/
 *.vcxproj.user
-.vs/
+.vs/CTAGS
+GRTAGS
+GTAGS
+GPATH
